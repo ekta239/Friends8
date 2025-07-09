@@ -216,18 +216,21 @@
 
 
 
-<audio id="bgMusic" auroplay loop muted>
+<audio id="bgMusic" loop>
   <source src="baarish.mp3" type="audio/mpeg">
 </audio>
 
   
   <script>
-    function showSurprise() {
-      document.getElementById('popup').classList.add('show');
-      document.getElementById('bgMusic').muted = false;
-      document.getElementById('bgMusic').play();
-      startSlideshow();
-    }
+  function showSurprise() {
+  const music = document.getElementById('bgMusic');
+  music.muted = false;
+  music.play().catch(err => console.log('Audio error:', err));
+  
+  document.getElementById('popup').classList.add('show');
+  startSlideshow();
+}
+
 
     function closeSurprise() {
       document.getElementById('popup').classList.remove('show');
