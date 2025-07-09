@@ -214,16 +214,18 @@
 
   </div>
 
-  <audio autoplay loop>
-    <source src="baarish.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
-<script>
-     function showSurprise() {
-       document.getElementById('popup').classList.add('show');
-       startSlideshow();
-    }  
+<audio id="bgMusic" loop>
+  <source src="baarish.mp3" type="audio/mpeg">
+</audio>
+
+  
+  <script>
+    function showSurprise() {
+      document.getElementById('popup').classList.add('show');
+      document.getElementById('bgMusic').play();
+      startSlideshow();
+    }
 
     function closeSurprise() {
       document.getElementById('popup').classList.remove('show');
