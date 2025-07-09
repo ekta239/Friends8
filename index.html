@@ -215,7 +215,7 @@
   </div>
 
 
-<audio id="bgMusic" loop>
+<audio id="bgMusic" auroplay loop muted>
   <source src="baarish.mp3" type="audio/mpeg">
 </audio>
 
@@ -223,6 +223,7 @@
   <script>
     function showSurprise() {
       document.getElementById('popup').classList.add('show');
+      document.getElementById('bgMusic').muted = false;
       document.getElementById('bgMusic').play();
       startSlideshow();
     }
