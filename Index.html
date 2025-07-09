@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Friendship Day</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Allura', cursive;
+      background: linear-gradient(to bottom, #a8c7ff, #ffffff);
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: #4682b4;
+      text-shadow: 2px 2px 10px rgba(173, 216, 230, 0.8);
+    }
+    p {
+      font-size: 1.5em;
+      color: #003366;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .love-letter {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 25px;
+      margin: 50px auto;
+      max-width: 700px;
+      font-size: 1.3em;
+      font-style: italic;
+      text-shadow: 1px 1px 8px #4682b4;
+      box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #87CEFA; }
+      100% { box-shadow: 0 0 20px #4682b4; }
+    }
+    .surprise-btn {
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      border: none;
+      padding: 18px 35px;
+      font-size: 1.5em;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      font-family: 'Pacifico', cursive;
+    }
+    .surprise-btn:hover {
+      background: linear-gradient(to right, #ff1493, #c71585);
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(255, 20, 147, 0.6);
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: white;
+      padding: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+      text-align: center;
+      z-index: 999;
+      transition: transform 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+      display: none;
+    }
+    .popup.show {
+      transform: translate(-50%, -50%) scale(1);
+      display: block;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 900px;
+      height: auto;
+      margin-bottom: 10px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    .slide.active {
+      display: block;
+    }
+    .popup video {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 15px;
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    .close-btn {
+      background: #ff69b4;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: none;
+    }
+    .close-btn:hover {
+      background: #ff1493;
+    }
+    footer {
+      margin-top: 50px;
+      color: #4169e1;
+      font-size: 1.2em;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+<h1>Happy Friendship Day💕</h1>
+<p>One bond made, forever to stay...<br><br>
+  Today, we celebrate <strong>US</strong> — our pure, beautiful friendship!<br>
+  From college corridors to heart’s core, <br>
+  Late entries, deep talks, unstoppable laughs — <br>
+  And this journey has just begun… 🌸
+</p>
+    <div class="love-letter">
+       <p>SALONI, I want to say that...<br><br>
+    🧡 You came into my life when I least expected it — at the end of college,<br>
+    💬 But it felt like we were meant to cross paths.<br>
+    🫶 Our vibe just clicked. No effort, no pressure — just comfort.<br><br>
+
+    🤝 You’re not just my friend — you’re that one constant I never knew I needed,<br>
+    💌 I can be myself around you, without filters, without hesitation.<br>
+    💭 We promised to be there for each other — and I truly mean it.<br><br>
+
+    🌱 I want this friendship to grow, no matter where life takes us.<br>
+    👰‍♀️ When I get married, there’s no second thought — *you’ll be my only bridesmaid.*<br>
+    ❤️ Because some people are not just friends, they’re family we choose.<br><br>
+
+    💖 Thank you for being that one person who truly gets me,<br>
+    💫 For all the laughs, the talks, the support, and the realness.<br>
+    🪄 Here’s to many more years of this beautiful bond — together, always.
+  </p>
+</div>
+    <button class="surprise-btn" onclick="showSurprise()">Click for a Surprise</button>
+    <div class="popup" id="popup">
+      <div class="slideshow-container">
+              <p>I promiss<br>
+   I will be there for you<strong> till the end....</strong> 
+</p>
+
+        <!-- First Image -->
+        <img src="img1.jpg" class="slide active">
+        
+        <!-- Second Image -->
+        <img src="img2.jpg" class="slide">
+        
+      
+        
+        <!-- Third Image -->
+        <img src="img3.jpg" class="slide">
+        <img src="img4.jpg" class="slide">
+        <img src="img5.jpg" class="slide">
+        
+
+        
+        <img src="img6.jpg" class="slide">
+        <img src="img7.jpg" class="slide">
+        <img src="img8.jpg" class="slide">
+        <img src="img9.jpg" class="slide">
+
+          <!-- First Video -->
+        <video controls autoplay muted class="slide">
+          <source src="vid1.mp4" type="video/mp4">
+        </video>
+        
+
+        <p>This will never gonna change</p>
+        <!-- More Images or Videos as needed -->
+      </div>
+      <button class="close-btn" onclick="closeSurprise()">Close</button>
+    </div>
+  <footer>
+  "Happy Friendship Day, Saloni 🤍"<br>
+  Grateful for a friend like you — today, tomorrow, always.
+</footer>
+
+  </div>
+
+  <audio autoplay loop>
+    <source src="baarish.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    function showSurprise() {
+      document.getElementById('popup').classList.add('show');
+      startSlideshow();
+    }
+
+    function closeSurprise() {
+      document.getElementById('popup').classList.remove('show');
+    }
+
+    function startSlideshow() {
+      let slides = document.querySelectorAll('.slide');
+      let index = 0;
+      let closeBtn = document.querySelector('.close-btn');
+
+      let slideInterval = setInterval(() => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        
+        // Show close button when the last image/video is displayed
+        if (index === slides.length - 1) {
+          closeBtn.style.display = 'inline-block';
+        } else {
+          closeBtn.style.display = 'none';
+        }
+
+        index++;
+
+        // Stop the slideshow after the last slide
+        if (index >= slides.length) {
+          clearInterval(slideInterval);
+        }
+      }, 3000);  // Changes slide every 3 seconds (adjust as needed)
+    }
+
+    
+  var pwd = prompt("Enter the surprise password:");
+  if (pwd !== "saloni143") {
+    alert("Wrong password!");
+    document.body.innerHTML = "<h2 style='text-align:center;'>Access Denied 🚫</h2>";
+  }
+</script>
+
+</body>
+</html>
